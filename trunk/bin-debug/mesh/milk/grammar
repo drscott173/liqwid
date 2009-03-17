@@ -1,0 +1,37 @@
+statement = 
+  math_expr
+  | ident "=" math_expr
+
+primary_expr =
+  ident
+  | value
+  | "(" math_expr ")"
+
+math_expr = 
+  primary_expr
+  | math_expr operator math_expr
+  | "-" math_expr
+  | "+" math_expr
+  | fn
+
+fn =
+  fn1 "(" math_expr ")"
+  | fn2 "(" math_expr "," math_expr ")"
+  | fn3 "(" math_expr "," math_expr "," math_expr ")"
+
+operator = 
+  {"*" | "/" | "%" | "+" |
+   "&" | "|"}
+
+ident = 
+  alpha alnum
+  | alpha
+
+alpha =
+  { A-Z | a-z | "$" | "_" }*
+
+alnum =
+  { alpha | 0-9 } *
+
+number = 
+  
