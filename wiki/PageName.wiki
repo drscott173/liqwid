@@ -1,0 +1,12 @@
+#summary Screen shots
+
+= Introduction =
+
+This is our first wiki page.  I'll upload some screenshots of Liqwid in action.
+
+
+= Details =
+
+Content goes here
+ * and here
+ * and here
